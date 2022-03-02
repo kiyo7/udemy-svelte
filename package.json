@@ -10,6 +10,7 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
+    "@rollup/plugin-replace": "^4.0.0",
     "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.6.0",
     "rollup": "^2.3.4",
@@ -20,7 +21,14 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "carbon-icons-svelte": "^10.44.4",
+    "dotenv": "^16.0.0",
+    "firebase": "^9.0.2",
+    "firebase-tools": "^10.2.1",
+    "js-cookie": "^3.0.1",
     "sirv-cli": "^2.0.0",
+    "smelte": "^1.1.8",
+    "svelte-hamburgers": "^3.0.1",
     "svelte-routing": "^1.6.0"
   }
 }

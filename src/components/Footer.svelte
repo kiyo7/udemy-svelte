@@ -1,5 +1,10 @@
 <script>
-
 </script>
 
-<footer>footer</footer>
+<footer class="bg-secondary-900">footer</footer>
+
+<style>
+  footer {
+    height: 60px;
+  }
+</style>
