@@ -10,14 +10,13 @@
 
   const unSubScribe = userId.subscribe((id) => (uid = id));
 
-  const submit = () => {
+  const submit = async () => {
     if (body.length < 10) {
       alert('日記の内容は10文字以上書いてください！');
       return false;
     }
-    const result = postDiary(uid, body, rate);
 
-    console.log(result);
+    const result = await postDiary(uid, body, rate);
 
     if (!result) {
       alert('日記の追加は失敗しました。');

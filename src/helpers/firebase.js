@@ -32,8 +32,8 @@ export const signInWithGoogle = () => {
       const token = credential.accessToken;
       const user = result.user;
       userId.set(result.user.uid);
-      console.log(user);
       Cookies.set('uid', result.user.uid);
+      document.location.reload();
     })
     .catch((error) => {
       const errorCode = error.code;
