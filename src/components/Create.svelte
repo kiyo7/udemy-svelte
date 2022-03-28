@@ -6,6 +6,8 @@
 
   let rate = 5;
   let body = '';
+  let image,
+    preview = '';
   let uid = null;
 
   const unSubScribe = userId.subscribe((id) => (uid = id));
@@ -29,6 +31,16 @@
   onDestroy(() => {
     unSubScribe;
   });
+
+  const onFileSelect = (e) => {
+    let target = e.target.files[0];
+    image = target;
+    let reader = new FileReader();
+    reader.readAsDataURL(target);
+    reader.onload = (e) => {
+      preview = e.target.result;
+    };
+  };
 </script>
 
 <h3>日記を書こう</h3>
@@ -42,6 +54,23 @@
     textarea
     rows="5"
     outlined
+  />
+  {#if preview}
+    <img src={preview} alt="preview" class="mb-6" />
+  {/if}
+  <label
+    for="file-input"
+    class="bg-primary-900 text-white-900 px-4 py-3 m-auto mb-6 w-4/12 block rounded"
+  >
+    画像を選択
+  </label>
+  <input
+    type="file"
+    accept="image/*"
+    id="file-input"
+    class="hidden"
+    bind:this={image}
+    on:change={(e) => onFileSelect(e)}
   />
   <div class="py-2">
     <Button class="text-white-900" type="submit">日記を保存</Button>
