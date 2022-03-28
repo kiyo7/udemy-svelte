@@ -1,5 +1,7 @@
 import {
   collection,
+  doc,
+  getDoc,
   addDoc,
   query,
   getDocs,
@@ -38,4 +40,17 @@ export const postDiary = async (uid = '', body = '', rate = 1) => {
     createdAt: dayjs().format('YYYY/MM/DD HH:mm:ss'),
   });
   return docRef.id ? true : false;
+};
+
+export const getDiary = async (id = 'test') => {
+  const diary = doc(db, 'diaries', id);
+  const docSnap = await getDoc(diary);
+
+  if (docSnap.exists()) {
+    console.log('Document data', docSnap.data());
+    return docSnap.data();
+  } else {
+    console.log('No Such document!');
+    return false;
+  }
 };
