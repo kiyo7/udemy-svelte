@@ -18,13 +18,13 @@
       return false;
     }
 
-    const result = await postDiary(uid, body, rate);
+    const result = await postDiary(uid, body, rate, image);
 
     if (!result) {
       alert('日記の追加は失敗しました。');
     } else {
       alert('日記が保存されました!');
-      document.location.href = '/';
+      location.href = '/';
     }
   };
 

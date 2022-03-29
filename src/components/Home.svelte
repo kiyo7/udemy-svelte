@@ -52,7 +52,6 @@
         </Link>
       {/each}
     </Router>
-    <p>Loaded!</p>
   {/await}
 {/if}
 
