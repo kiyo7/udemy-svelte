@@ -28,7 +28,9 @@
 </script>
 
 {#if !uid}
-  <Button on:click={signInWithGoogle} class="text-white-900 mt-10"
+  <Button
+    on:click={signInWithGoogle}
+    class="text-white-900 mt-10 dark:bg-dark-400 dark-hover:bg-dark-900"
     >ログイン</Button
   >
 {:else}
