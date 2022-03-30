@@ -67,7 +67,7 @@
     {/if}
     <label
       for="file-input"
-      class="bg-primary-900 text-white-900 px-4 py-3 m-auto mb-6 w-4/12 block rounded"
+      class="bg-primary-900 text-white-900 px-4 py-3 m-auto mb-6 w-4/12 block rounded dark:bg-accent-900"
     >
       画像を選択
     </label>
@@ -90,11 +90,13 @@
       outlined
     />
     <div class="py-2">
-      <Button class="text-white-900" type="submit">日記を更新</Button>
+      <Button class="text-white-900 dark:bg-accent-900" type="submit"
+        >日記を更新</Button
+      >
     </div>
   </form>
-  <Button class="bg-alert-900 text-white-900 mb-10" on:click={deleteHandle}
-    >日記を削除</Button
+  <Button
+    class="bg-alert-900 text-white-900 mb-10 dark:bg-alert-600 dark-hover:bg-dark-700"
+    on:click={deleteHandle}>日記を削除</Button
   >
 {/await}
-<p>Diary</p>

@@ -32,7 +32,7 @@
     >ログイン</Button
   >
 {:else}
-  <section>
+  <section class="m-auto mb-10 w-6/12">
     <h5>日記を書いた月で検索</h5>
     <TextField type="month" bind:value={filterMonth} on:change={filterHandle} />
   </section>
@@ -44,7 +44,7 @@
     {#if diaries.length > 0}
       <Router>
         {#each diaries as d}
-          <Link to={'/diary/' + d.id} class="flex items-center mb-6">
+          <Link to={'/diary/' + d.id} class="flex items-center mb-6 border-b-2">
             <aside class="diary-aside">
               <p class="text-left">
                 {dayjs(d.createdAt).format('YYYY年MM月DD日')}
@@ -54,7 +54,7 @@
                 alt="diary"
                 class="diary-image"
               />
-              <p>
+              <p class="mb-6">
                 <StarRating rating={d.rate / 2} />
               </p>
             </aside>

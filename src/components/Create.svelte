@@ -60,7 +60,7 @@
   {/if}
   <label
     for="file-input"
-    class="bg-primary-900 text-white-900 px-4 py-3 m-auto mb-6 w-4/12 block rounded"
+    class="bg-primary-900 text-white-900 px-4 py-3 m-auto mb-6 w-4/12 block rounded dark:bg-accent-900"
   >
     画像を選択
   </label>
@@ -73,6 +73,8 @@
     on:change={(e) => onFileSelect(e)}
   />
   <div class="py-2">
-    <Button class="text-white-900" type="submit">日記を保存</Button>
+    <Button class="text-white-900 dark:bg-accent-500" type="submit"
+      >日記を保存</Button
+    >
   </div>
 </form>

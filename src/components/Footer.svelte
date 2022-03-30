@@ -10,7 +10,9 @@
   onDestroy(() => unSubscribe());
 </script>
 
-<footer class="bg-secondary-900  flex items-center justify-around">
+<footer
+  class="bg-secondary-900 flex items-center justify-around dark:bg-dark-900"
+>
   <Router>
     <Link class="block mb-3" to="/">Home</Link>
     <Link class="block mb-3" to="about">日記の効果とは？</Link>
